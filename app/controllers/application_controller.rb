@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
 
 def submit_add
+  @first_num = params.fetch(:first_num).to_f
+  @second_num = params.fetch(:second_num).to_f
 
   render({:template => "results/submit_add.html.erb"})
 end
